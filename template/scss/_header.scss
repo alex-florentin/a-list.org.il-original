@@ -428,7 +428,7 @@ header {
             cursor: pointer;
             .categories-wrapper {
                .h-categories {
-               top: 138px;  
+               top: 138px;
                }
             }
          }
@@ -442,6 +442,35 @@ header {
     } //container
   } //bottom-bar
 } //header
+.sticky-header {
+z-index: 9999;
+position: fixed;
+top: 0;
+right: 0;
+width: 100%;
+   .top-bar {
+   z-index: 8;
+   box-shadow: none;
+   border-bottom: 0;
+   } //top-bar
+   .bottom-bar {
+      .container {
+         .logo {
+         width: 160px;
+         } //logo
+         .search-box {
+         margin-top: 0;
+            .cat-button {
+               .categories-wrapper {
+                  .h-categories {
+                  top: 70px !important;
+                  } //h-categories
+               } //categories-wrapper
+            } //cat-button
+         } //search-box
+      } //container
+   } //bottom-bar
+} //sticky-header
 
 @media screen and (max-width: 768px) {
    .sticky-header {

@@ -153,6 +153,9 @@ z-index: 997;
       direction: rtl;
       max-width: 90%;
       } //title
+      .bio {
+      display: none;
+      }
    } //name-and-title
     &:hover > .mask {
     opacity: .83;
@@ -168,46 +171,54 @@ z-index: 997;
   } //image-wrapper
   @media screen and (max-width: 768px) {
      .image-wrapper {
-        .mask:hover {
-        opacity: 0;
+      display: block;
+        .mask {
+         display: none;
         }
         img {
         border-radius: 0;
+        display: inline-block;
+        width: 40%;
         }
         .name-and-title {
          position: static;
-         width: 100%;
          margin-bottom: 20px;
+         display: inline-block;
+         float: right;
+         width: 57%;
+         &:hover > .name {
+         font-size: 16px;
+         }
+         &:hover > .title {
+         font-size: 13px;
+         }
            .name {
            opacity: 1;
-           font-size: 20px;
            position: static;
-           background-color: #fff;
-           border: 1px solid;
-           border-top-color: transparent;
-           border-bottom-color: transparent;
-           border-right-color: #ccc - 10;
-           border-left-color: #ccc;
-           color: #333;
-           padding-top: 5px;
-           }
-           .title {
-           min-width: 100%;
-           opacity: 1;
            font-size: 16px;
-           position: static;
-           background-color: #fff;
-           border: 1px solid;
-           border-top-color: transparent;
-           border-bottom-color: #ccc;
-           border-right-color: #ccc - 10;
-           border-left-color: #ccc + 10;
-           margin-top: -2px;
-           padding-bottom: 5px;
+           color: #111;
+           text-align: left;
                &:hover {
                font-size: 16px;
                }
-           }
+            } //name
+            .title {
+            opacity: 1;
+            font-size: 13px;
+            position: static;
+            text-align: left;
+            color: #444;
+            display: block;
+               &:hover {
+               font-size: 13px;
+               }
+            } //title
+           .bio {
+            display: inline-block;
+            font-size: 13px;
+            text-align: left;
+            color: #666;
+            }
         } //name-and-title
 
         &:hover > .mask {
@@ -219,6 +230,32 @@ z-index: 997;
      }
   } // media 768
 } //profiles
+
+#pagination_num {
+direction: rtl;
+text-align: center;
+margin-top: 50px;
+margin-bottom: 40px;
+   .page, .active {
+   font-size: 15px;
+   padding: 8px 12px;
+   background: #fff;
+   color: #222;
+   box-shadow: 1px 1px rgba(0,0,0,.1);
+   border-radius: 2px;
+   transition: .3s all ease;
+      &:hover {
+      background-color: #469e96;
+      color: #fff - 20;
+      }
+   }
+   .active {
+   display: inline-block;
+   background-color: #469E96;
+   color: #fff;
+   font-family: alef-regular;
+   }
+}
 
 .get-in-touch {
 position: absolute;
