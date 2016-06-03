@@ -51,8 +51,7 @@ add_action( 'widgets_init', 'arphabet_widgets_init' );
 // Widgets
 add_action( 'admin_menu', 'my_admin_menu' );
 function my_admin_menu() {
-	add_menu_page( 'Order profiles page', 'Order profiles', 'manage_options', 'order-profiles-page.php', 'order_profiles_page', 'dashicons-admin-generic', 120  );
-	add_menu_page( 'Manage users page', 'Manage users ', 'manage_options', 'mange-users-page.php', 'manage_users_page', 'dashicons-groups', 120  );
+	add_menu_page( 'Order profiles page', 'Order profiles', 'manage_options', 'order-profiles-page.php', 'order_profiles_page', 'dashicons-randomize', 120  );
 }
 function order_profiles_page(){
 	?>
@@ -119,43 +118,7 @@ function order_profiles_page(){
 					echo "<script>window.location.reload(true)</script>";
 				}
 			}
-} // order profiles page
-
-function manage_users_page() {
-	$output = NULL;
-	if(isset($_POST['submit'])) {
-		$mysqli = NEW mysqli('localhost', 'agenda_alist2', '#AcBV8,D(0o5TZ3&QZ', 'agenda_alist2');
-		$mysqli->set_charset("utf8");
-		$search = $_POST['search'];
-		$resultSet = $mysqli->query("SELECT * FROM wp_people_table WHERE email = '$search'");
-		if($resultSet->num_rows > 0) {
-			while($rows = $resultSet->fetch_assoc())
-			{
-				$name = $rows['name'];
-				$last_name = $rows['last_name'];
-
-				$output = "
-
-
-
-				";
-			}
-		} else {
-			$output = "This email doesn't exists in database";
-		}
-	}
-	?>
-	<h2>Manage users</h2>
-	<div class="manage-users-container">
-		<form method="post">
-			<input type="text" name="search">
-			<input type="submit" name="submit" value="Search">
-		</form>
-	</div>
-	<?php
-	echo $output;
-
-} //manage-users-page
+} // order profiles page function
 
 function truncate($text, $chars = 270) {
     $text = $text." ";
