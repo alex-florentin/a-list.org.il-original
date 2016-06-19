@@ -41,12 +41,12 @@
 			{
 				var idArr = Array();
 				var countID = 0;
-														idArr = email.split(',');
-														for(var i=0;i<idArr.length;i++){
-															if(idArr[i] > 0){
-																countID++
-															}
-														}
+						idArr = email.split(',');
+						for(var i=0;i<idArr.length;i++){
+							if(idArr[i] > 0){
+								countID++
+							}
+						}
 						if(countID == 0){//no categories selection
 							 location.reload();
 						}else{

@@ -51,8 +51,8 @@ add_action( 'widgets_init', 'arphabet_widgets_init' );
 // Widgets
 add_action( 'admin_menu', 'my_admin_menu' );
 function my_admin_menu() {
-	add_menu_page( 'Manage users page', 'Manage users', 'manage_options', 'manage-users-page.php', 'manage_users_page', 'dashicons-welcome-view-site', 120  );
-	add_menu_page( 'Order profiles page', 'Order profiles', 'manage_options', 'order-profiles-page.php', 'order_profiles_page', 'dashicons-admin-generic', 120  );
+	add_menu_page( 'Manage users page', 'Manage users', 'manage_options', 'manage-users-page.php', 'manage_users_page', 'dashicons-groups', 120  );
+	add_menu_page( 'Order profiles page', 'Order profiles', 'manage_options', 'order-profiles-page.php', 'order_profiles_page', 'dashicons-sort', 120  );
 }
 
 function manage_users_page(){
