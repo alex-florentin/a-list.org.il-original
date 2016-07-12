@@ -85,9 +85,10 @@
 				return xmlHttp;
 			}
 	</script>
+   <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery.min.js"></script>
    <script src="<?php bloginfo('template_url') ?>/js/jquery.gray.min.js"></script>
-	<script src="<?php bloginfo('template_url') ?>/js/imagesload.min.js"></script>
+   <script src="<?php bloginfo('template_url') ?>/js/imagesload.min.js"></script>
    <script src="<?php bloginfo('template_url') ?>/js/masonery.min.js"></script>
-	<script src="<?php bloginfo('template_url') ?>/js/main.js"></script>
+   <script src="<?php bloginfo('template_url') ?>/js/main.js"></script>
 	<?php wp_footer(); ?>
 </footer>

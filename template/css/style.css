@@ -3410,6 +3410,13 @@ header .top-bar {
   display: inline-block;
   width: 100%;
   height: 50px; }
+  header .top-bar .container .logo-slim-container .logo-slim {
+    display: none;
+    width: 110px;
+    margin-top: 5px; }
+    header .top-bar .container .logo-slim-container .logo-slim img {
+      width: 100%;
+      height: auto; }
   header .top-bar .container .social-icons {
     display: inline-block; }
     header .top-bar .container .social-icons .facebook-page {
@@ -3483,14 +3490,22 @@ header .top-bar {
         width: 100%;
         margin-left: 0;
         left: 0;
-        border-radius: 0; }
+        border-radius: 0 !important;
+        border-color: #328a82; }
         header .top-bar .container .social-icons #hidden-share-box div a {
           display: block;
           width: 100%; }
         header .top-bar .container .social-icons #hidden-share-box .share-whatsapp {
           display: block; }
         header .top-bar .container .social-icons #hidden-share-box div:last-child {
-          border-radius: 0; } }
+          border-radius: 0; }
+      header .top-bar .container .social-icons .hidden-share-box-mobile {
+        border-color: #222 !important;
+        border-radius: 0 !important;
+        box-shadow: 1px 0 1px rgba(0, 0, 0, 0.5);
+        margin-top: 11px; }
+        header .top-bar .container .social-icons .hidden-share-box-mobile > div {
+          background-color: #222 !important; } }
   header .top-bar .container .toggle-menu-button {
     display: none;
     border: none;
@@ -3618,12 +3633,28 @@ header .top-bar {
       left: 0 !important;
       -webkit-transition: .3s all ease;
               transition: .3s all ease; } }
+header .mobile-description {
+  display: inline-block;
+  position: absolute;
+  top: 115px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 25px;
+  line-height: 28px;
+  padding: 10px;
+  -webkit-transition: .4s all ease;
+          transition: .4s all ease; }
+header .mobile-description-desactived {
+  top: -100%; }
 header .bottom-bar {
   background-color: #fff;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.12);
-  padding: 15px 0;
+  padding: 17.5px 0;
   position: relative;
-  z-index: 998; }
+  z-index: 998;
+  -webkit-transition: .3s all ease;
+          transition: .3s all ease; }
   header .bottom-bar .container .logo {
     display: inline-block;
     width: 270px; }
@@ -3636,7 +3667,8 @@ header .bottom-bar {
       margin-left: auto;
       margin-right: auto;
       max-width: 200px;
-      height: 50px; } }
+      height: 50px;
+      margin-bottom: 10px; } }
   header .bottom-bar .container .search-box {
     display: block;
     float: right;
@@ -3701,7 +3733,7 @@ header .bottom-bar {
           top: 95px;
           left: 0;
           width: 100%;
-          padding: 20px 0;
+          padding: 10px 0;
           background-color: #288078;
           -webkit-transition: .4s all ease;
                   transition: .4s all ease; }
@@ -3734,6 +3766,22 @@ header .bottom-bar {
                 background-color: #5ab2aa; }
     header .bottom-bar .container .search-box .categories {
       display: none; }
+  header .bottom-bar .container .search-box-mobile {
+    margin-top: 0; }
+    header .bottom-bar .container .search-box-mobile .search-form .search-input {
+      background-color: #fafafa;
+      color: #504f4f !important; }
+    header .bottom-bar .container .search-box-mobile .search-form .search-button {
+      color: #288078;
+      top: 0;
+      left: 0;
+      padding: 7px 10px;
+      background-color: #469E96;
+      border-radius: 3px 0 0 3px; }
+      header .bottom-bar .container .search-box-mobile .search-form .search-button:hover {
+        color: #fff; }
+    header .bottom-bar .container .search-box-mobile .cat-button {
+      color: #288078; }
   @media (max-width: 768px) {
     header .bottom-bar .container .search-box {
       float: none; }
@@ -3747,6 +3795,8 @@ header .bottom-bar {
           top: 138px; }
       header .bottom-bar .container .search-box .categories-wrapper .categories {
         display: none; } }
+header .bottom-bar-actived {
+  margin-top: 0px !important; }
 
 .sticky-header {
   z-index: 9999;
